@@ -21,7 +21,7 @@ It includes:
 - a boilerplate .ts file for solutions
 - a .txt file with the input from the Advent of Code website.
 
-`sh scripts/createNewDayFolder.sh {{dayNumber}}`
+`sh scripts/createDayFolder.sh {{dayNumber}}`
 
 ### Run Solution
 
