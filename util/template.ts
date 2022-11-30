@@ -5,21 +5,14 @@ function _getInput(): string {
 }
 
 function part1(): number {
-  // const data: string = getInput();
+  // const data = getInput();
   return 0;
 }
 
 function part2(): number {
-  // const data: string = getInput();
+  // const data = getInput();
   return 0;
 }
 
-function checkAnswers() {
-  const one: number = part1();
-  const two: number = part2();
-
-  console.log("Part 1:", one);
-  console.log("Part 2:", two);
-}
-
-checkAnswers();
+console.log("Part 1:", part1());
+console.log("Part 2:", part2());

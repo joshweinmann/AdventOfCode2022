@@ -20,7 +20,7 @@ async function getInputData(year: Year, day: Day): Promise<string> {
   return response.text();
 }
 
-function validateArgs(args: string[]): boolean {
+function validateArgs(args: string[]) {
   if (args.length !== 2) {
     console.error("Wrong number of arguments");
     return false;
@@ -68,8 +68,8 @@ async function createDayFolder() {
 
     // create .ts file from template in new directory
     const templateText = await Deno.readTextFile("./util/template.ts");
-    const temp = templateText.replace("{{day}}", `day${day}`);
-    await Deno.writeTextFile(`./day${day}/main.ts`, temp);
+    const editedTemplateText = templateText.replace("{{day}}", `day${day}`);
+    await Deno.writeTextFile(`./day${day}/main.ts`, editedTemplateText);
   }
 }
 
