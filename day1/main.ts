@@ -5,27 +5,23 @@ function getInput() {
   );
 }
 
-function sum(calories: number[]) {
-  let result = 0;
-  for (const cal of calories) {
-    result += cal;
-  }
-  return result;
+function getSortedElfCalories() {
+  const elves = getInput();
+  const calories = elves.map((elf) => {
+    let sum = 0;
+    for (const cal of elf) sum += cal;
+    return sum;
+  });
+  return calories.sort((a, b) => b - a);
 }
 
 function part1() {
-  const elves = getInput();
-  const calories = elves.map((elf) => sum(elf));
-  calories.sort((a, b) => b - a);
-
+  const calories = getSortedElfCalories();
   return calories[0];
 }
 
 function part2() {
-  const elves = getInput();
-  const calories = elves.map((elf) => sum(elf));
-  calories.sort((a, b) => b - a);
-
+  const calories = getSortedElfCalories();
   return calories[0] + calories[1] + calories[2];
 }
 
