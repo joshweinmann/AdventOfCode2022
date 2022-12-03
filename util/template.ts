@@ -1,15 +1,15 @@
-function _getInput(): string {
-  const inputText: string = Deno.readTextFileSync("./{{day}}/input.txt");
+function _getInput() {
+  const inputText = Deno.readTextFileSync("./{{day}}/input.txt");
 
   return inputText;
 }
 
-function part1(): number {
+function part1() {
   // const data = getInput();
   return 0;
 }
 
-function part2(): number {
+function part2() {
   // const data = getInput();
   return 0;
 }
