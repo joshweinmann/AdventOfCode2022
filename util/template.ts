@@ -1,7 +1,6 @@
 function _getInput() {
-  const inputText = Deno.readTextFileSync("./{{day}}/input.txt");
-
-  return inputText;
+  const inputText = Deno.readTextFileSync("./{{day}}/input.txt").trim();
+  return inputText.split("\n");
 }
 
 function part1() {

@@ -6,7 +6,7 @@ function getInput() {
 function getCompartmentsFromRucksack(rucksack: string) {
   return [
     rucksack.slice(0, rucksack.length / 2),
-    rucksack.slice(rucksack.length / 2, rucksack.length)
+    rucksack.slice(rucksack.length / 2, rucksack.length),
   ];
 }
 
@@ -37,7 +37,7 @@ function getPriority(item: string) {
 function part1() {
   const rucksacks = getInput();
   let total = 0;
-  
+
   for (const rucksack of rucksacks) {
     const [compartment1, compartment2] = getCompartmentsFromRucksack(rucksack);
     const match = getMatch(compartment1, compartment2);
