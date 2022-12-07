@@ -2,11 +2,9 @@ function getInput() {
   return Deno.readTextFileSync("./day6/input.txt");
 }
 
-function part1() {
-  const data = getInput();
-
-  for (let i = 4; i <= data.length; i++) {
-    const sequence = data.slice(i - 4, i);
+function findMarker(data: string, size: number) {
+  for (let i = size; i <= data.length; i++) {
+    const sequence = data.slice(i - size, i);
     const hasDuplicate = /(.).*\1/;
 
     if (!hasDuplicate.test(sequence)) {
@@ -17,19 +15,14 @@ function part1() {
   return null;
 }
 
+function part1() {
+  const data = getInput();
+  return findMarker(data, 4);
+}
+
 function part2() {
   const data = getInput();
-
-  for (let i = 14; i <= data.length; i++) {
-    const sequence = data.slice(i - 14, i);
-    const hasDuplicate = /(.).*\1/;
-
-    if (!hasDuplicate.test(sequence)) {
-      return i;
-    }
-  }
-
-  return null;
+  return findMarker(data, 14);
 }
 
 console.log("Part 1:", part1());
